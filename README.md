@@ -1,4 +1,8 @@
 # CS634_IBM_Fairness_Pipeline
+Team 3	
+ba327@njit.edu - Benjamin Amoah	
+ec396@njit.edu - Eric Cho
+rmt29@njit.edu - Rohit Tikyani
 Detecting and mitigating age bias on credit decisions
 
 Summary of AI Fairness 360
