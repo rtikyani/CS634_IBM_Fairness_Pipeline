@@ -4,22 +4,23 @@
 
 [Summary of AI Fairness 360]
 As machine learning models become more widely used in domains such as mortgage lending, hiring and prison sentencing, fairness and bias are becoming central foci of the algorithms used in these models. To address issues related to fairness, AI Fairness 360 (AIF360) was developed to help better understand fairness metrics and mitigation techniques.
+ 
+AIF 360 is an end-to-end workflow that allows users to transform raw data to a model, adding in functionality throughout. The goals of the pipeline, ease-of-use and extensibility, can be seen through the structure and functionality of the pipeline. The general pipeline for bias mitigation works as follows: outputs are new datasets sharing the same protected attributes as other datasets, transitions are transformations that modify features and/or labels, and trapezoids are learned models. One can reach a fair prediction through one of three bias mitigation algorithms: fair pre-processing, fair in-processing, fair post-processing. The three methods each implement a category of bias mitigation algorithms, so one must decide which they would like to use based on its respective features.  The methods are based on the location where the algorithms can intervene in a complete machine learning pipeline.  This algorithm should be used if the training data can be modified.  There are four bias mitigation algorithms: reweighing, optimized preprocessing, learning fair representations, and disparate impact remover. The in-processing algorithm is applied during the training.  This algorithm should be used if the learning algorithm can be modified. There are two bias mitigation algorithms, adversarial debiasing, and prejudice remover.  The post-processing treats the learned model as a black box.  This algorithm should be the only algorithm used if the training data or learning algorithm cannot be modified.  There are three bias mitigation algorithms: equalized odds postprocessing,  calibrated equalized odds postprocessing, and reject option classification.  
 
-[Favorable Label]: value corresponds to an advantageous outcome
+
+[Favorable Label]: Value corresponds to an advantageous outcome
 [Protected Attribute:] Partitions a population into groups with different amounts of benefits, ie) gender, age, race, etc.
 [Privileged Group]: Group that has historically been at a systematic advantage (Example: Age when applying for loans, more time to build credit)
 [Group Fairness]: Groups defined by protected attributes receive similar treatments or outcomes.
 
-[Individual Fairness]: Similar individuals receiving similar treatments or outcomes
+[Individual Fairness]: Similar individuals receiving similar treatments or outcomes.
 
-[Bias]: systematic error that gives privileged groups advantages and vice versa for unprivileged groups
+[Bias]: Systematic error that gives privileged groups advantages and vice versa for unprivileged groups.
 
-[Fairness Metric]: quantification of unwanted bias in training data or models
+[Fairness Metric]: Quantification of unwanted bias in training data or models.
 
-[Bias Mitigation Algorithm]: used to reduce unwanted bias in training data or models
- 
-AIF 360 is an end-to-end workflow that allows users to transform raw data to a model, adding in functionality throughout. The goals of the pipeline, ease-of-use and extensibility, can be seen through the structure and functionality of the pipeline. The general pipeline for bias mitigation works as follows: outputs are new datasets sharing the same protected attributes as other datasets, transitions are transformations that modify features and/or labels, and trapezoids are learned models. One can reach a fair prediction through one of three bias mitigation algorithms: fair pre-processing, fair in-processing, fair post-processing. The three methods each implement a category of bias mitigation algorithms, so one must decide which they would like to use based on its respective features.  The methods are based on the location where the algorithms can intervene in a complete machine learning pipeline.  This algorithm should be used if the training data can be modified.  There are four bias mitigation algorithms: reweighing, optimized preprocessing, learning fair representations, and disparate impact remover. The in-processing algorithm is applied during the training.  This algorithm should be used if the learning algorithm can be modified. There are two bias mitigation algorithms, adversarial debiasing, and prejudice remover.  The post-processing treats the learned model as a black box.  This algorithm should be the only algorithm used if the training data or learning algorithm cannot be modified.  There are three bias mitigation algorithms: equalized odds postprocessing,  calibrated equalized odds postprocessing, and reject option classification.  
- 
+[Bias Mitigation Algorithm]: Used to reduce unwanted bias in training data or models.
+
 [Dataset Class] handles all forms of data (like training data and testing data), and organizes the data by associating each instance of data with protected attributes. It also contains subclasses that are more specific and further organize the data. These classes serve to provide a common structure for the entire pipeline to use and also allow different utility functions and capabilities (from Python) to be applied to the data. 
  
 [Metrics Class] and its subclasses calculate fairness matrics and check for biases in datasets and models. Because fairness can be defined in many ways and is dependent on the context, many different fairness metrics are included in the toolkit, which gives the user the option to select the best metrics given the data. 
