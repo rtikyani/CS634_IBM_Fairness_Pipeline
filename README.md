@@ -1,3 +1,5 @@
+# CS634_IBM_Fairness_Pipeline
+
 **Detecting and mitigating age bias on credit decisions**
 
 [Summary of AI Fairness 360]
@@ -41,7 +43,7 @@ The result is then cached so that if the exact same inputs are provided, the res
 
 Many other toolkits exist, although they are not as comprehensive as AIF360 in that AIF 360 provides bisa metrics, mitigation algorithms, bias metric explanations, and industrial usability. 
 
-# CS634_IBM_Fairness_Pipeline
+
 Team 3	
 ba327@njit.edu - Benjamin Amoah	
 ec396@njit.edu - Eric Cho
