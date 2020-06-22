@@ -26,6 +26,7 @@ AIF 360 is an end-to-end workflow that allows users to transform raw data to a m
 [Metrics Class] and its subclasses calculate fairness matrics and check for biases in datasets and models. Because fairness can be defined in many ways and is dependent on the context, many different fairness metrics are included in the toolkit, which gives the user the option to select the best metrics given the data. 
  
 [Explainer class] is intended to be associated with the Metrics class.  It is used to provide further insights on computed fairness metrics.  The Explainer class stresses the need for explanations.  TextExplainer is a subclass that returns plain string text with a numeric value. This can be invoked for both privileged and unprivileged instances by passing arguments.  
+
 Evaluation of algorithm fairness cannot be captured in a one-size-fits-all solution. The goals of evaluation are to demonstrate the capabilities of the toolkit in terms of the various fairness metrics and bias mitigation algorithms and to show how a user can understand the behavior of various metrics and bias mitigation algorithms on the dataset and make appropriate choices according to needs. 
 
 The dataset is randomly divided into training (50%), validation(20%), and test partitions (30%).  Each point consists of a mean and spread ± 1 Standard Deviation using 25 random splits for random forest classifier, number of trees are set to 100 and minimum samples at a leaf node to be 20.   
